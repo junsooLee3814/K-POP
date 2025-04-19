@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-팝의 세계</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-600 {
+            animation-delay: 600ms;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6c5ce7',
+                        secondary: '#a8a4e6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <nav class="bg-gray-900/95 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- 로고 -->
+                <a href="#" class="text-xl font-bold text-white">K-POP</a>
+                
+                <!-- 메인 메뉴 -->
+                <div class="hidden md:flex items-center space-x-8 ml-auto">
+                    <a href="us_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        미국_POP
+                    </a>
+                    <a href="gb_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        영국_POP
+                    </a>
+                    <a href="jp_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        일본_POP
+                    </a>
+                    <a href="latin_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        라틴_POP
+                    </a>
+                </div>
+
+                <!-- 모바일 메뉴 버튼 -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 모바일 메뉴 -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="us_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        미국_POP
+                    </a>
+                    <a href="gb_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        영국_POP
+                    </a>
+                    <a href="jp_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        일본_POP
+                    </a>
+                    <a href="latin_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        라틴_POP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 기존 헤더와 컨텐츠의 상단 여백 조정 -->
+    <header class="relative overflow-hidden bg-gradient-to-r from-primary to-secondary mt-16">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="flex flex-col items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" 
+                     alt="대한민국 국기" 
+                     class="w-24 md:w-32 mb-8 rounded-lg shadow-2xl fade-in">
+                <h1 class="text-5xl md:text-6xl font-black text-center mb-4 text-white drop-shadow-lg fade-in delay-200">
+                    WELCOME to K-POP World.
+                </h1>
+                <p class="text-xl md:text-2xl text-center text-white/90 font-light drop-shadow-lg fade-in delay-400">
+                    세계를 매료시킨 한국의 대중음악
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl fade-in delay-600">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                K-팝이란?
+            </h2>
+            <p class="text-gray-300 leading-relaxed">
+                K-팝은 한국의 대중음악을 의미하며, 전 세계적으로 큰 인기를 얻고 있는 음악 장르입니다. 
+                댄스, 힙합, R&B, 록 등 다양한 음악 요소를 포함하며, 
+                화려한 무대와 뮤직비디오로도 유명합니다.
+            </p>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-8 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                인기 아티스트
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="./images/bts.jpg" alt="BTS" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">BTS</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>2013년 데뷔한 7인조 보이그룹</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>전 세계적으로 가장 영향력 있는 K-pop 그룹</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>그래미 노미네이트, 빌보드 핫100 1위 다수 기록</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>음악성과 퍼포먼스로 전 세계 팬들과 소통</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="./images/blackpink.jpg" alt="BLACKPINK" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">BLACKPINK</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>2016년 데뷔한 4인조 걸그룹</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>유튜브 구독자 수 최다 보유 걸그룹</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>코첼라 페스티벌 K-pop 걸그룹 최초 헤드라이너</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>글로벌 패션 브랜드 앰버서더로 활동</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="./images/newjeans.jpg" alt="NewJeans" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">NewJeans</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>2022년 데뷔한 5인조 걸그룹</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>데뷔와 동시에 국내외 차트 석권</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Y2K 감성과 트렌디한 음악으로 MZ세대 사로잡아</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>자연스럽고 친근한 매력의 'IT 걸그룹'</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                최신 K-POP 뉴스
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 뉴스 아이템 1 -->
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">EXO 카이, 새 미니앨범 'Wait On Me' 티저 공개</h3>
+                    <p class="text-gray-400 text-sm">카이가 새 미니앨범 수록곡 "Flight to Paris"의 프리뷰를 공개하며 컴백 준비</p>
+                </div>
+                
+                <!-- 뉴스 아이템 2 -->
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">BLACKPINK 코첼라 공연 성공적 마무리</h3>
+                    <p class="text-gray-400 text-sm">제니, 리사, 로제가 코첼라 페스티벌에서 특별한 순간을 공유</p>
+                </div>
+
+                <!-- 뉴스 아이템 3 -->
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">이승기, 5월 가수 컴백 확정</h3>
+                    <p class="text-gray-400 text-sm">배우 겸 가수 이승기가 5월 새로운 음악으로 돌아올 예정</p>
+                </div>
+
+                <!-- 뉴스 아이템 4 -->
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">(여자)아이들 소연, 새로운 헤어스타일로 변신</h3>
+                    <p class="text-gray-400 text-sm">소연이 스택드 보브 컷으로 새로운 매력 선보여</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-primary/20 hover:bg-primary/30 text-white px-6 py-3 rounded-lg transition-all hover:scale-105">
+                    더 많은 뉴스 보기
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                K-POP의 역사
+            </h2>
+            <div class="space-y-8">
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                    <h3 class="text-xl font-bold text-white mb-2">1세대 (1990년대)</h3>
+                    <p class="text-gray-300">서태지와 아이들을 시작으로 H.O.T., 젝스키스, S.E.S., 핑클 등이 활동. 댄스 음악과 힙합의 결합으로 현대적 K-POP의 기틀 마련.</p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                    <h3 class="text-xl font-bold text-white mb-2">2세대 (2000년대)</h3>
+                    <p class="text-gray-300">동방신기, 슈퍼주니어, 빅뱅, 원더걸스, 소녀시대 등이 활동. 해외 진출 본격화와 한류 열풍의 시작.</p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                    <h3 class="text-xl font-bold text-white mb-2">3세대 (2010년대)</h3>
+                    <p class="text-gray-300">EXO, 방탄소년단, BLACKPINK 등이 활동. 소셜미디어를 통한 글로벌 팬덤 형성과 세계적 인기 획득.</p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                    <h3 class="text-xl font-bold text-white mb-2">4세대 (2020년대)</h3>
+                    <p class="text-gray-300">에스파, NewJeans, 르세라핌 등 새로운 세대의 등장. 메타버스 활용과 혁신적인 마케팅 전략 도입.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                K-POP의 특징
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                        트레이닝 시스템
+                    </h3>
+                    <p class="text-gray-300">체계적인 연습생 제도를 통한 전문적인 아티스트 육성</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                        퍼포먼스
+                    </h3>
+                    <p class="text-gray-300">화려한 군무와 완성도 높은 안무, 무대 연출</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                        프로듀싱
+                    </h3>
+                    <p class="text-gray-300">세련된 음악 프로듀싱과 다양한 장르의 융합</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                        팬덤 문화
+                    </h3>
+                    <p class="text-gray-300">강력한 팬덤 형성과 소셜미디어를 통한 글로벌 소통</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 모바일 메뉴 토글 기능
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

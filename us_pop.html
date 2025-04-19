@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미국_POP의 세계</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-600 {
+            animation-delay: 600ms;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6c5ce7',
+                        secondary: '#a8a4e6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <nav class="bg-gray-900/95 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- 로고 -->
+                <a href="index.html" class="text-xl font-bold text-white">World POP</a>
+                
+                <!-- 메인 메뉴 -->
+                <div class="hidden md:flex items-center space-x-8 ml-auto">
+                    <a href="us_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        미국_POP
+                    </a>
+                    <a href="gb_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        영국_POP
+                    </a>
+                    <a href="jp_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        일본_POP
+                    </a>
+                    <a href="latin_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        라틴_POP
+                    </a>
+                </div>
+
+                <!-- 모바일 메뉴 버튼 -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 모바일 메뉴 -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="us_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        미국_POP
+                    </a>
+                    <a href="gb_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        영국_POP
+                    </a>
+                    <a href="jp_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        일본_POP
+                    </a>
+                    <a href="latin_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        라틴_POP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden bg-gradient-to-r from-primary to-secondary mt-16">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="flex flex-col items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" 
+                     alt="미국 국기" 
+                     class="w-24 md:w-32 mb-8 rounded-lg shadow-2xl fade-in">
+                <h1 class="text-5xl md:text-6xl font-black text-center mb-4 text-white drop-shadow-lg fade-in delay-200">
+                    WELCOME to US-POP World.
+                </h1>
+                <p class="text-xl md:text-2xl text-center text-white/90 font-light drop-shadow-lg fade-in delay-400">
+                    세계를 매료시킨 미국의 대중음악
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl fade-in delay-600">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                US-POP이란?
+            </h2>
+            <p class="text-gray-300 leading-relaxed">
+                미국의 팝 음악은 전 세계 대중음악의 중심이며, 다양한 장르와 스타일을 선도하고 있습니다. 
+                R&B, 힙합, 록, 컨트리 등 다양한 장르의 융합으로 독특한 음악 문화를 만들어냈습니다.
+            </p>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-8 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                인기 아티스트
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/191125_Taylor_Swift_at_the_2019_American_Music_Awards_(cropped).png" 
+                             alt="Taylor Swift" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">Taylor Swift</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>팝과 컨트리를 넘나드는 다재다능한 아티스트</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>수많은 그래미 어워드 수상</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>독보적인 작사/작곡 능력</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Ariana_Grande_at_the_2020_Grammy_Awards.png" 
+                             alt="Ariana Grande" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">Ariana Grande</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>파워풀한 보컬과 넓은 음역대</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>R&B와 팝의 완벽한 조화</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>독특한 음색과 스타일</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Beyonc%C3%A9_at_The_Lion_King_European_Premiere_2019.png" 
+                             alt="Beyoncé" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">Beyoncé</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>R&B의 퀸</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>완벽한 퍼포먼스와 보컬</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>문화적 영향력과 혁신</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                최신 US-POP 뉴스
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Taylor Swift, 새 앨범 'The Tortured Poets Department' 발매</h3>
+                    <p class="text-gray-400 text-sm">테일러 스위프트가 새 앨범으로 또 다시 차트 석권</p>
+                </div>
+                
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Ariana Grande, 'eternal sunshine' 월드 투어 발표</h3>
+                    <p class="text-gray-400 text-sm">아리아나 그란데, 3년 만의 월드 투어로 팬들과 만난다</p>
+                </div>
+
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Beyoncé의 'COWBOY CARTER' 빌보드 1위</h3>
+                    <p class="text-gray-400 text-sm">비욘세, 컨트리 앨범으로 장르의 경계를 넘다</p>
+                </div>
+
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Post Malone, 새로운 록 앨범 준비 중</h3>
+                    <p class="text-gray-400 text-sm">포스트 말론, 장르 변화를 예고하며 팬들의 기대감 고조</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-primary/20 hover:bg-primary/30 text-white px-6 py-3 rounded-lg transition-all hover:scale-105">
+                    더 많은 뉴스 보기
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 모바일 메뉴 토글 기능
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 

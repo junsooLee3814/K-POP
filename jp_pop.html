@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일본_POP의 세계</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-600 {
+            animation-delay: 600ms;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6c5ce7',
+                        secondary: '#a8a4e6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <nav class="bg-gray-900/95 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- 로고 -->
+                <a href="index.html" class="text-xl font-bold text-white">World POP</a>
+                
+                <!-- 메인 메뉴 -->
+                <div class="hidden md:flex items-center space-x-8 ml-auto">
+                    <a href="us_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        미국_POP
+                    </a>
+                    <a href="gb_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        영국_POP
+                    </a>
+                    <a href="jp_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        일본_POP
+                    </a>
+                    <a href="latin_pop.html" class="nav-link text-gray-300 hover:text-white transition-colors duration-300">
+                        라틴_POP
+                    </a>
+                </div>
+
+                <!-- 모바일 메뉴 버튼 -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 모바일 메뉴 -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="us_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        미국_POP
+                    </a>
+                    <a href="gb_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        영국_POP
+                    </a>
+                    <a href="jp_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        일본_POP
+                    </a>
+                    <a href="latin_pop.html" class="block text-gray-300 hover:text-white transition-colors duration-300 py-2">
+                        라틴_POP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden bg-gradient-to-r from-primary to-secondary mt-16">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="flex flex-col items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" 
+                     alt="일본 국기" 
+                     class="w-24 md:w-32 mb-8 rounded-lg shadow-2xl fade-in">
+                <h1 class="text-5xl md:text-6xl font-black text-center mb-4 text-white drop-shadow-lg fade-in delay-200">
+                    WELCOME to J-POP World.
+                </h1>
+                <p class="text-xl md:text-2xl text-center text-white/90 font-light drop-shadow-lg fade-in delay-400">
+                    세계를 매료시킨 일본의 대중음악
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl fade-in delay-600">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                J-POP이란?
+            </h2>
+            <p class="text-gray-300 leading-relaxed">
+                J-POP은 일본의 대중음악을 대표하는 장르로, 독특한 멜로디와 하모니, 
+                애니메이션과의 결합 등 일본만의 특색있는 음악 문화를 보여줍니다.
+            </p>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-8 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                인기 아티스트
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Yoasobi_at_MTV_VMAJ_2022.jpg" 
+                             alt="YOASOBI" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">YOASOBI</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>소설을 음악으로 표현하는 독특한 콘셉트</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>디지털 시대를 대표하는 음악성</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>애니메이션 주제가로도 큰 인기</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Official_BABYMETAL_with_Rob_Halford_-_Alternative_Press_Music_Awards_2016_%28cropped%29.jpg" 
+                             alt="BABYMETAL" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">BABYMETAL</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>메탈과 아이돌의 혁신적인 결합</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>글로벌한 팬덤 보유</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>독창적인 퍼포먼스</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <div class="aspect-[3/2] overflow-hidden bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/ONE_OK_ROCK_-_Mighty_Long_Fall_at_Yokohama_Stadium.jpg" 
+                             alt="ONE OK ROCK" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">ONE OK ROCK</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>록 장르의 대표주자</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>국제적인 투어와 협업</p>
+                            <p class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>강력한 라이브 퍼포먼스</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800/50 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-primary">
+                최신 J-POP 뉴스
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">YOASOBI, 새 디지털 싱글 발매</h3>
+                    <p class="text-gray-400 text-sm">인기 소설 원작의 새로운 싱글로 차트 1위 달성</p>
+                </div>
+                
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">BABYMETAL, 월드 투어 발표</h3>
+                    <p class="text-gray-400 text-sm">유럽과 미주를 아우르는 대규모 투어 예정</p>
+                </div>
+
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">ONE OK ROCK, 새 앨범 준비 중</h3>
+                    <p class="text-gray-400 text-sm">팬들이 기대하는 10번째 정규 앨범 작업 중</p>
+                </div>
+
+                <div class="bg-gray-900/50 rounded-lg p-6 hover:bg-gray-900/70 transition-all group">
+                    <span class="text-primary/80 text-sm mb-2 block">2024.04.19</span>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">LiSA, 새로운 애니메이션 주제가 발표</h3>
+                    <p class="text-gray-400 text-sm">인기 애니메이션의 오프닝 테마곡으로 선정</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-primary/20 hover:bg-primary/30 text-white px-6 py-3 rounded-lg transition-all hover:scale-105">
+                    더 많은 뉴스 보기
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 모바일 메뉴 토글 기능
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
